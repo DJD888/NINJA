@@ -1,0 +1,606 @@
+Microsoft
+Developer technologies
+ 
+
+Sign in
+Microsoft Edge
+Web platform
+Community
+Tools
+Demos
+Feedback & support
+Home Platform Documentation Webdriver commands 
+Documentation
+API reference 
+Accessibility 
+Dev guide 
+Extensions 
+F12 devtools guide 
+Performance analysis 
+Webdriver commands 
+Dialogs 
+Element inspection 
+Input 
+Navigation 
+Screenshots 
+Script execution 
+Server 
+Sessions 
+Window 
+Microsoft Edge / Internet Explorer API reference
+Web apps on Windows 10
+The WebDriver API is a platform and language-neutral interface and wire protocol allowing programs or scripts to control the behavior of a web browser. The Microsoft Edge implementation of WebDriver supports commands from both the W3C WebDriver Specification and the JSON Wire Protocol. Here’s how to get started with WebDriver for Microsoft Edge.
+WebDriver Server Command Line Flags
+List of command line flags for the WebDriver server.
+Name
+Description
+Example
+host
+Specify the host the server should use
+–host=localhost
+port
+Specify the port the server should use
+–port=17556
+package
+Specify the application id of the UWP app to be launched with WebDriver
+–package=applicationId
+verbose
+Enable verbose log output from the server
+–verbose
+W3C WebDriver Specification Support
+The support on a per command basis for the W3C WebDriver Specification.
+Locator Strategies
+Status
+Available Build
+CSS selector
+Supported
+10240
+Link text selector
+Supported
+10240
+Partial link text selector
+Supported
+10240
+XPath selector
+Supported
+10586
+Method
+URI Template
+Command
+Status
+Available Build/Priority
+POST
+/session
+New Session
+Supported
+10240
+DELETE
+/session/{session id}
+Delete Session
+Supported
+10240
+POST
+/session/{session id}/url
+Go
+Supported
+10240
+GET
+/session/{session id}/url
+Get Current URL
+Supported
+10240
+POST
+/session/{session id}/back
+Back
+Supported
+10240
+POST
+/ses
+Get Element Tag Name
+Supported
+10240
+GET
+/session/{session id}/element/{element id}/rect
+Get Element Rect
+Supported
+10586
+GET
+/session/{session id}/element/{element id}/enabled
+Is Element Enabled
+Supported
+10240
+GET
+/session/{session id}/source
+Get Page Source
+Supported
+10586
+POST
+/session/{session id}/execute/sync
+Execute Script
+Not Supported
+Priority 2
+POST
+/session/{session id}/execute/async
+Execute Async Script
+Not Supported
+Priority 2
+GET
+/session/{session id}/cookie/{na
+DELETE
+/session/{session id}/cookie/{name}
+Delete Cookie
+Supported
+10240
+DELETE
+/session/{session id}/cookie
+Delete All Cookies
+Supported
+10586
+POST
+/session/{session id}/timeouts
+Set Timeout
+Supported
+10240
+POST
+/session/{session id}/actions
+Perform Actions
+Not Supported
+Priority 3
+DELETE
+/session/{session id}/actions
+Releasing Actions
+Not Supported
+Priority 3
+POST
+/session/{session id}/element/{element id}/click
+Element Click
+Supported
+10240
+POST
+/session/{session id}/element/{element id}/clear
+Element Clear
+Supported
+10240
+POST
+/session/{session id}/element/{element id}/sendKeys
+Element Send Keys
+Not Supported
+Priority 2
+POST
+/session/{session id}/alert/dismiss
+Dismiss Alert
+Not Supported
+Priority 2
+POST
+/session/{session id}/alert/accept
+Accept Alert
+Not Supported
+Priority 2
+GET
+/session/{session id}/alert/text
+Get Alert Text
+Not Supported
+Priority 2
+POST
+/session/{session id}/alert/text
+Send Alert Text
+Not Supported
+Priority 2
+GET
+/session/{session id}/screenshot
+Take Screenshot
+Supported
+10240
+GET
+/session/{session id}/element/{element id}/screenshot
+Take Element Screenshot
+Supported
+10240
+JSON Wire Protocol Support
+The support on a per command basis for the JSON Wire Protocol.
+HTTP Method
+Path
+Status
+Available Build/Priority
+GET
+/status
+Supported
+10240
+POST
+/session
+Supported
+10240
+GET
+/sessions
+Supported
+10240
+GET
+/session/:sessionId
+Supported
+10240
+DELETE
+/session/:sessionId
+Supported
+10240
+POST
+/session/:sessionId/timeouts
+Supported
+10240
+POST
+/session/:sessionId/timeouts/async_script
+Not Supported
+Priority 3
+POST
+/session/:sessionId/timeouts/implicit_wait
+Supported
+10586
+GET
+/session/:sessionId/window_handle
+Supported
+10586
+GET
+/session/:sessionId/window_handles
+Supported
+10586
+GET
+/session/:sessionId/url
+Supported
+10240
+POST
+/session/:sessionId/url
+Supported
+10240
+POST
+/session/:sessionId/forward
+Supported
+10240
+POST
+/session/:sessionId/back
+Supported
+10240
+POST
+/session/:sessionId/refresh
+Supported
+10240
+POST
+/session/:sessionId/execute
+Supported
+10240
+POST
+/session/:sessionId/execute_async
+Supported
+10586
+GET
+/session/:sessionId/screenshot
+Supported
+10240
+GET
+/session/:sessionId/ime/available_engines
+Not Supported
+Priority 3
+GET
+/session/:sessionId/ime/active_engine
+Not Supported
+Priority 3
+GET
+/session/:sessionId/ime/activated
+Not Supported
+Priority 3
+POST
+/session/:sessionId/ime/deactivate
+Not Supported
+Priority 3
+POST
+/session/:sessionId/ime/activate
+Not Supported
+Priority 3
+POST
+/session/:sessionId/frame
+Supported
+10586
+POST
+/session/:sessionId/frame/parent
+Supported
+10586
+POST
+/session/:sessionId/window
+Supported
+10586
+DELETE
+/session/:sessionId/window
+Supported
+10586
+POST
+/session/:sessionId/window/:windowHandle/size
+Supported
+10586
+GET
+/session/:sessionId/window/:windowHandle/size
+Supported
+10586
+POST
+/session/:sessionId/window/:windowHandle/position
+Supported
+10586
+GET
+/session/:sessionId/window/:windowHandle/position
+Supported
+10586
+GET
+/session/:sessionId/window/:windowHandle/maximize
+Supported
+10586
+GET
+/session/:sessionId/cookie
+Supported
+10586
+POST
+/session/:sessionId/cookie
+Supported
+10240
+DELETE
+/session/:sessionId/cookie
+Supported
+10586
+DELETE
+/session/:sessionId/cookie/:name
+Supported
+10240
+GET
+/session/:sessionId/source
+Supported
+10586
+GET
+/session/:sessionId}/title
+Supported
+10240
+POST
+/session/:sessionId/element
+Supported
+10586
+POST
+/session/:sessionId/elements
+Supported
+10586
+POST
+/session/:sessionId/element/active
+Supported
+10586
+GET
+/session/:sessionId/element/:id
+Not Supported
+Priority 3
+POST
+/session/:sessionId/element/:id/element
+Supported
+10586
+POST
+/session/:sessionId/element/:id/elements
+Supported
+10586
+POST
+/session/:sessionId/element/:id/click
+Supported
+10240
+POST
+/session/:sessionId/element/:id/submit
+Supported
+10586
+GET
+/session/:sessionId/element/:id/text
+Supported
+10240
+POST
+/session/:sessionId/element/:id/value
+Supported
+10240
+POST
+/session/:sessionId/keys
+Supported
+10586
+GET
+/session/:sessionId/element/:id/name
+Supported
+10240
+POST
+/session/:sessionId/element/:id/clear
+Supported
+10240
+GET
+/session/:sessionId/element/:id/selected
+Supported
+10240
+GET
+/session/:sessionId/element/:id/enabled
+Supported
+10240
+GET
+/session/:sessionId/element/:id/attribute/:name
+Supported
+10240
+GET
+/session/:sessionId/element/:id/equals/:other
+Supported
+10586
+GET
+/session/:sessionId/element/:id/displayed
+Supported
+10240
+GET
+/session/:sessionId/element/:id/location
+Supported
+10586
+GET
+/session/:sessionId/element/:id/location_in_view
+Supported
+10586
+GET
+/session/:sessionId/element/:id/size
+Supported
+10586
+GET
+/session/:sessionId/element/:id/css/:propertyName
+Supported
+10240
+GET
+/session/:sessionId/orientation
+Not Supported
+Priority 3
+POST
+/session/:sessionId/orientation
+Not Supported
+Priority 3
+GET
+/session/:sessionId/alert_text
+Supported
+10240
+POST
+/session/:sessionId/alert_text
+Supported
+10586
+POST
+/session/:sessionId/accept_alert
+Supported
+10240
+POST
+/session/:sessionId/dismiss_alert
+Supported
+10240
+POST
+/session/:sessionId/moveto
+Supported
+10586
+POST
+/session/:sessionId/click
+Supported
+10240
+POST
+/session/:sessionId/buttondown
+Supported
+10586
+POST
+/session/:sessionId/buttonup
+Supported
+10586
+POST
+/session/:sessionId/doubleclick
+Supported
+10586
+POST
+/session/:sessionId/touch/click
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/down
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/up
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/move
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/scroll
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/scroll
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/doubleclick
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/longclick
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/flick
+Not Supported
+Priority 3
+POST
+/session/:sessionId/touch/flick
+Not Supported
+Priority 3
+GET
+/session/:sessionId/location
+Supported
+10586
+POST
+/session/:sessionId/location
+Supported
+10586
+GET
+/session/:sessionId/local_storage
+Supported
+10586
+POST
+/session/:sessionId/local_storage
+Supported
+10586
+DELETE
+/session/:sessionId/local_storage
+Supported
+10586
+GET
+/session/:sessionId/local_storage/key/:key
+Supported
+10586
+DELETE
+/session/:sessionId/local_storage/key/:key
+Supported
+10586
+GET
+/session/:sessionId/local_storage/size
+Supported
+10586
+GET
+/session/:sessionId/session_storage
+Supported
+10586
+POST
+/session/:sessionId/session_storage
+Supported
+10586
+DELETE
+/session/:sessionId/session_storage
+Supported
+10586
+GET
+/session/:sessionId/session_storage/key/:key
+Supported
+10586
+DELETE
+/session/:sessionId/session_storage/key/:key
+Supported
+10586
+GET
+/session/:sessionId/session_storage/size
+Supported
+10586
+GET
+/session/:sessionId/log
+Not Supported
+Priority 3
+GET
+/session/:sessionId/log/types
+Not Supported
+Priority 3
+GET
+/session/:sessionId/application_cache/status
+Supported
+10586
+This article
+Fork on GitHub to contribute
+Share: Twitter or Facebook
+Dialogs
+Follow us:
+
+
+
+
+Feedback & supportTerms of useTrademarksPrivacy and cookies© 2016 MicrosoftHello from Seattle
