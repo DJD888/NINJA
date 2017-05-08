@@ -5,7 +5,22 @@ You can use the [editor on GitHub](https://github.com/DJD888/NINJA/edit/master/R
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
-
+engines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rb"
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
@@ -17,6 +32,171 @@ Syntax highlighted code block
 
 - Bulleted
 - List
+* 		TABLE OF CONTENTS
+* 		Enabling the Engine 
+* 		Configuring the Engine
+engines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rb"engines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rengines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rengines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rengines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rengines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rengines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.rengines:
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.r
+
+            - "**/*.rb"
+Configuring the Engine
+ general:
+  build_dir: api
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+
+checkout:
+  post:
+    - cp ./ci-server/config.yml ./app-server/config.yml
+
+dependencies:
+  post:
+    - python ./install-packages
+
+database:
+  override:
+    - mysql -u ubuntu circle_test < my-database-setup.sql
+
+test:
+  override:
+    - php ./test-suite/run.php --unit-tests
+
+test:
+  override:
+    - php ./app/run-server.php --daemon
+    - php ./test-suite/run.php --unit-tests
+
+
+
+
+
+
+
+
+HTML formatter, run codeclimate analyze -f html > out.html and inspecting out.html in a browser.
+
 
 1. Numbered
 2. List
